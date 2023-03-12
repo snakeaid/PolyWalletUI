@@ -49,3 +49,4 @@ env/*
 /.idea/codeStyles/Project.xml
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/vcs.xml
+/.vscode/settings.json

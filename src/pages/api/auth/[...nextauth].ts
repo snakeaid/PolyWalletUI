@@ -3,9 +3,13 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import { Auth } from '@/lib/auth';
 
 export const authOptions: NextAuthOptions = {
+  theme: {
+    colorScheme: 'light',
+    brandColor: '#705ecc',
+    logo: ''
+  },
   providers: [
     CredentialsProvider({
-      name: 'Log in',
       type: 'credentials',
       id: 'login',
       credentials: {
@@ -26,10 +30,6 @@ export const authOptions: NextAuthOptions = {
     async signIn({ user }) {
       return !!user;
     },
-    // async session({ session }) {
-    //   session.user.isLoggedIn = true;
-    //   return session;
-    // },
     async jwt({ token, user }) {
       return token;
     },
